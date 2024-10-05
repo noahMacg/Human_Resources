@@ -1,3 +1,4 @@
+
 /**
  * Noah MacGillivray
  * Assignment: Human Resources Part 1
@@ -35,8 +36,14 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-
-		System.out.println("test");
+		PersonSet personSet = new PersonSet();
+		// System.out.println(personSet.toString());
+		Person noah = new Person("Noah", 172, 72);
+		Person noahDup = new Person("Noah", 172, 72);
+		// System.out.println(noah);
+		personSet.add(noah);
+		personSet.add(noahDup);
+		personSet.printAll();
 
 		/*
 		 * // Don't overcomplicate the data
