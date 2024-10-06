@@ -26,7 +26,8 @@ public class PersonSet implements PersonList {
         }
     }
 
-    // Source: CGPT "how do I print an ArrayList"
+    // Source: CGPT "how do I print an ArrayList" and "why does it use override
+    // from another class"
     public void printAll() {
         // for (Person p : personSet)
         for (int i = 0; i < personSet.size(); i++) {

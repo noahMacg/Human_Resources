@@ -1,9 +1,9 @@
 public class Person {
     private String name;
-    private int height;
-    private int weight;
+    private double height;
+    private double weight;
 
-    public Person(String name, int height, int weight) {
+    public Person(String name, double height, double weight) {
         this.name = name;
         this.height = height;
         this.weight = weight;
@@ -14,7 +14,7 @@ public class Person {
     // string format
     @Override
     public String toString() {
-        return String.format("\"%s\",\"%d\",\"%s\"", name, height, weight);
+        return String.format("\"%s\",\"%s\",\"%s\"", name, height, weight);
     }
 
     // Equals method outline
