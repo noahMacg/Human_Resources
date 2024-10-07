@@ -31,6 +31,17 @@ public class PersonSet implements PersonList {
         }
     }
 
+    // Source: Claude: "what is the best way to iterate through an ArrayList of data
+    // and
+    // concatenate it into a single returnable string"
+    public String allPersonData() {
+        String allData = "";
+        for (int i = 0; i < personSet.size(); i++) {
+            allData = allData + personSet.get(i) + "\n";
+        }
+        return allData;
+    }
+
     // Source: CGPT "how do I print an ArrayList" and "why does it use override
     // from another class"
     // Prints the ArrayList.

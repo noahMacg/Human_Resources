@@ -51,14 +51,16 @@ public class Main {
 		personSet.add(mario);
 		personSet.add(peach);
 		personSet.add(noahDup);
-		personSet.printAll();
+		System.out.println(personSet.allPersonData());
+		// personSet.printAll();
 		System.out.println();
 
 		String name; // Holds name while reading in
 		int height; // Holds height while reading in
 		int weight; // Holds height while reading in
 
-		String filePath = "C:\\Users\\pilga\\code\\CS2251_code\\Human_Resources_Part1\\Human Resources Part 1\\src\\hr.txt";
+		String filePath = "C:\\Users\\pilga\\code\\CS2251_code\\Human_Resources_Part1\\" +
+				"Human Resources Part 1\\src\\hr.txt";
 		// Reads in file
 		try {
 			Scanner fileReader = new Scanner(new File(filePath));

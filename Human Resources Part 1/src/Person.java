@@ -7,11 +7,11 @@
 
 public class Person {
     private String name; // holds the person's name
-    private double height; // holds the person's height
-    private double weight; // hold the person's height
+    private int height; // holds the person's height
+    private int weight; // hold the person's height
 
     // constructor
-    public Person(String name, double height, double weight) {
+    public Person(String name, int height, int weight) {
         this.name = name;
         this.height = height;
         this.weight = weight;
@@ -21,7 +21,7 @@ public class Person {
     // database ready string format
     @Override
     public String toString() {
-        return String.format("\"%s\",\"%s\",\"%s\"", name, height, weight);
+        return String.format("%-10s %-10s %-10s", name, height, weight);
     }
 
     // Method to check for duplicates
