@@ -40,6 +40,13 @@ public class PersonSet implements PersonList {
         }
         return allData;
     }
+//    public void printWithHeader() {
+//        String headerName ="Name";
+//        String headerHeight ="Name";
+//        String headerName ="Name";
+//        System.out.printf();
+//
+//    }
 
     // // Source: CGPT "how do I print an ArrayList" and "why does it use override
     // // from another class"

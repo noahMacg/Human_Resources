@@ -7,11 +7,11 @@
 
 public class Person implements Comparable<Person> {
     private String name; // holds the person's name
-    private int height; // holds the person's height
-    private int weight; // hold the person's height
+    private double height; // holds the person's height
+    private double weight; // hold the person's height
 
     // constructor
-    public Person(String name, int height, int weight) {
+    public Person(String name, double height, double weight) {
         this.name = name;
         this.height = height;
         this.weight = weight;
@@ -20,6 +20,12 @@ public class Person implements Comparable<Person> {
     public String getName() {
         return name;
     }
+    public double getHeight() {return height;}
+    public double getWeight() {return weight;}
+
+    public void setName(String name){this.name = name;}
+    public void setHeight(Double height){this.height = height;}
+    public void setWeight(Double weight){this.weight = weight;}
 
     // Source: CGPT: "how would I construct an override toString in java to output a
     // database ready string format

@@ -13,6 +13,6 @@ public class PersonOrderedSet extends PersonSet {
         super.add(p);
         Collections.sort(personSet);
 }
-System.out.println(personOrderedSet.allPersonData());
+
 }
 //testing

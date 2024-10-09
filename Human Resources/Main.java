@@ -49,30 +49,30 @@ public class Main {
 		 * String filePath = args[0];
 		 */
 
-		String filePath = "C:\\Users\\pilga\\code\\CS2251_code\\Human_Resources\\Human Resources\\src\\hr.txt";
+		String filePath = "C:\\Users\\pilga\\code\\CS2251_code\\Human_Resources\\Human Resources\\hr.txt";
 
-		//Testing
+		// Testing
 		/*
-		Person noah = new Person("Noah", 172, 72);
-		Person mario = new Person("Mario", 155, 90);
-		Person noahDup = new Person("Noah", 172, 72); // Dup test
-		Person peach = new Person("Peach", 183, 60);
-
-		PersonOrderedSet personSet = new PersonOrderedSet();
-		personSet.add(noah);
-		personSet.add(mario);
-		personSet.add(peach);
-		personSet.add(noahDup);
-		System.out.println(personSet.allPersonData());
-		System.out.println();
+		 * Person noah = new Person("Noah", 172, 72);
+		 * Person mario = new Person("Mario", 155, 90);
+		 * Person noahDup = new Person("Noah", 172, 72); // Dup test
+		 * Person peach = new Person("Peach", 183, 60);
+		 * 
+		 * PersonOrderedSet personSet = new PersonOrderedSet();
+		 * personSet.add(noah);
+		 * personSet.add(mario);
+		 * personSet.add(peach);
+		 * personSet.add(noahDup);
+		 * System.out.println(personSet.allPersonData());
+		 * System.out.println();
 		 */
 
 		PersonSet personOrderedSet = new PersonSet();
-		// PersonSet personSetImperial = new PersonSet();
+		PersonSet personImperialSet = new PersonSet();
 
 		String name; // Holds name while reading in
-		int height; // Holds height while reading in
-		int weight; // Holds height while reading in
+		double height; // Holds height while reading in
+		double weight; // Holds height while reading in
 
 		// Reads in file
 		try {
@@ -82,11 +82,13 @@ public class Main {
 			}
 			while (fileReader.hasNextLine()) {
 				name = fileReader.next();
-				height = fileReader.nextInt();
-				weight = fileReader.nextInt();
+				height = fileReader.nextDouble();
+				weight = fileReader.nextDouble();
 
-				Person person = new Person (name, height, weight);
-				personOrderedSet.add(person);
+				Person orderPerson = new Person(name, height, weight);
+				personOrderedSet.add(orderPerson);
+				Person imperialPerson = new Person(name, height, weight);
+				personImperialSet.add(imperialPerson);
 
 			}
 			fileReader.close();
@@ -95,7 +97,8 @@ public class Main {
 			System.out.println(e);
 			System.exit(1);
 		}
-
+		System.out.println(personOrderedSet.allPersonData());
+		System.out.println(personImperialSet.allPersonData());
 
 		// File writer
 		try {
