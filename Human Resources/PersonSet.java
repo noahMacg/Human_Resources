@@ -33,7 +33,8 @@ public class PersonSet implements PersonList {
 
     // Source: Claude: "what is the best way to iterate through an ArrayList of data
     // and concatenate it into a single returnable string"
-    public String allPersonData() {
+    @Override
+    public String toString() {
         String allData = "";
         for (int i = 0; i < personSet.size(); i++) {
             allData = allData + personSet.get(i) + "\n";

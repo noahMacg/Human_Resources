@@ -10,6 +10,8 @@ public class PersonOrderedSet extends PersonSet {
     
     @Override
     public void add(Person p) {
+        //System.out.println("This is in PersonOrderedSet.");
+
         super.add(p);
         Collections.sort(personSet);
 }

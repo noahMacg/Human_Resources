@@ -67,11 +67,11 @@ public class Main {
 		 * System.out.println();
 		 */
 
-		PersonSet personOrderedSet = new PersonSet();
-		PersonSet personImperialSet = new PersonSet();
+		PersonSet personOrderedSet = new PersonOrderedSet();
+		PersonSet personImperialSet = new PersonImperialSet();
 
 		String name; // Holds name while reading in
-		double height; // Holds height while reading in
+		double height; // Holds height while reading in<
 		double weight; // Holds height while reading in
 
 		// Reads in file
@@ -97,8 +97,10 @@ public class Main {
 			System.out.println(e);
 			System.exit(1);
 		}
-		System.out.println(personOrderedSet.allPersonData());
-		System.out.println(personImperialSet.allPersonData());
+		System.out.println("This is the ordered set...");
+		System.out.println(personOrderedSet);
+		System.out.println("This is the imperial set...");
+		System.out.println(personImperialSet);
 
 		// File writer
 		try {

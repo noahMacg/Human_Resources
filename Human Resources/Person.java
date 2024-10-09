@@ -24,14 +24,14 @@ public class Person implements Comparable<Person> {
     public double getWeight() {return weight;}
 
     public void setName(String name){this.name = name;}
-    public void setHeight(Double height){this.height = height;}
-    public void setWeight(Double weight){this.weight = weight;}
+    public void setHeight(double height){this.height = height;}
+    public void setWeight(double weight){this.weight = weight;}
 
     // Source: CGPT: "how would I construct an override toString in java to output a
     // database ready string format
     @Override
     public String toString() {
-        return String.format("%-10s %-10s %-10s", name, height, weight);
+        return String.format("%-10s %-10.5s %-10.5s", name, height, weight);
     }
 
     @Override

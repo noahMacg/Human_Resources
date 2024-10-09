@@ -6,9 +6,11 @@ public class PersonImperialSet extends PersonSet {
     public void add(Person p) {
         // Convert height from cm to ft
         double heightInFeet = p.getHeight() * 0.0328084;
-
+        //System.out.println(heightInFeet);
         // Convert weight from kg to lbs
         double weightInPounds = p.getWeight() * 2.20462;
+        //System.out.println(weightInPounds);
+
 
         // Set the person's height and weight to imperial units
         p.setHeight(heightInFeet);
