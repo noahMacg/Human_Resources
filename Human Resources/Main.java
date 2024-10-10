@@ -97,16 +97,26 @@ public class Main {
 			System.out.println(e);
 			System.exit(1);
 		}
-		System.out.printf("%-10s %10s %14s", "Name", "Height(cm)", "Weight(kg)" + "\n");
-		System.out.println(personOrderedSet);
-		System.out.printf("%-10s %10s %14s", "Name", "Height(ft)", "Weight(lb)" + "\n");
-		System.out.println(personImperialSet);
+		/*
+		 * System.out.printf("%-10s %10s %14s", "Name", "Height(cm)", "Weight(kg)" +
+		 * "\n");
+		 * System.out.println(personOrderedSet);
+		 * System.out.printf("%-10s %10s %14s", "Name", "Height(ft)", "Weight(lb)" +
+		 * "\n");
+		 * System.out.println(personImperialSet);
+		 */
+
+		System.out.println(PersonSet.outputOrderedSet(personOrderedSet));
+		System.out.println(PersonSet.outputImperialSet(personImperialSet));
 
 		// File writer
 		try {
-			FileWriter fileWriterOrder = new FileWriter("outputfile.txt");
-			fileWriterOrder.write("testing");
-			fileWriterOrder.close();
+			FileWriter fileOrderedSet = new FileWriter("HR_data_ordered_set.txt");
+			FileWriter fileImperialSet = new FileWriter("HR_data_imperial_set.txt");
+			fileOrderedSet.write(PersonSet.outputOrderedSet(personOrderedSet));
+			fileImperialSet.write(PersonSet.outputOrderedSet(personImperialSet));
+			fileOrderedSet.close();
+			fileImperialSet.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println(e);

@@ -41,13 +41,28 @@ public class PersonSet implements PersonList {
         }
         return allData;
     }
-//    public void printWithHeader() {
-//        String headerName ="Name";
-//        String headerHeight ="Name";
-//        String headerName ="Name";
-//        System.out.printf();
-//
-//    }
+
+    public static String outputOrderedSet(PersonSet p) {
+        String title = "<<Nintendo's human resources data>>";
+        String header = String.format("%-10s %10s %14s", "Name", "Height(cm)", "Weight(kg)" + "\n");
+        return title + "\n" + header + p.toString();
+
+    }
+
+    public static String outputImperialSet(PersonSet p) {
+        String title = "<<Nintendo's human resources data>>";
+        String header = String.format("%-10s %10s %14s", "Name", "Height(ft)", "Weight(lbs)" + "\n");
+        return title + "\n" + header + p.toString();
+
+    }
+
+    // public void printWithHeader() {
+    // String headerName ="Name";
+    // String headerHeight ="Name";
+    // String headerName ="Name";
+    // System.out.printf();
+    //
+    // }
 
     // // Source: CGPT "how do I print an ArrayList" and "why does it use override
     // // from another class"

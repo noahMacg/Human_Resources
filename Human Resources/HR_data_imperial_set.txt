@@ -1,0 +1,7 @@
+<<Nintendo's human resources data>>
+Name       Height(cm)    Weight(kg)
+Mario      5.085         198.4
+Luigi      5.183         182.9
+Bowser     10.17         1600.
+Toad       1.345         15.43
+Peach      6.003         132.2

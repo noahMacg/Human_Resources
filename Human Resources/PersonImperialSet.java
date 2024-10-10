@@ -6,7 +6,7 @@ public class PersonImperialSet extends PersonSet {
     public void add(Person p) {
         // Convert height from cm to ft
         double heightInFeet = p.getHeight() * 0.0328084;
-        System.out.println("In PersonImperialSet");
+        // System.out.println("In PersonImperialSet");
         // Convert weight from kg to lbs
         double weightInPounds = p.getWeight() * 2.20462;
         // System.out.println(weightInPounds);
