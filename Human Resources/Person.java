@@ -20,18 +20,32 @@ public class Person implements Comparable<Person> {
     public String getName() {
         return name;
     }
-    public double getHeight() {return height;}
-    public double getWeight() {return weight;}
 
-    public void setName(String name){this.name = name;}
-    public void setHeight(double height){this.height = height;}
-    public void setWeight(double weight){this.weight = weight;}
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 
     // Source: CGPT: "how would I construct an override toString in java to output a
     // database ready string format
     @Override
     public String toString() {
-        return String.format("%-10s %-10.5s %-10.5s", name, height, weight);
+        return String.format("%-10s %-13.5s %-2.5s", name, height, weight);
     }
 
     @Override
@@ -48,7 +62,7 @@ public class Person implements Comparable<Person> {
 
         // if Object o == this then return true
         if (o == this) {
-            //System.out.println("Caught a duplicate.");
+            // System.out.println("Caught a duplicate.");
             return true;
         }
 
@@ -63,7 +77,7 @@ public class Person implements Comparable<Person> {
         // if Person p has the same name, height, and weight as
         // this then return true
         if (name.equals(p.name) && height == p.height && weight == p.weight) {
-            //System.out.println("Caught a duplicate.");
+            // System.out.println("Caught a duplicate.");
             return true;
         } else
             return false;

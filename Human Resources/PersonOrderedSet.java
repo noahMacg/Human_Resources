@@ -7,14 +7,14 @@ ways, how to implement them with different classes and why we need to implement 
 */
 
 public class PersonOrderedSet extends PersonSet {
-    
+
     @Override
     public void add(Person p) {
-        //System.out.println("This is in PersonOrderedSet.");
+        System.out.println("This is in PersonOrderedSet.");
 
         super.add(p);
         Collections.sort(personSet);
-}
+    }
 
 }
-//testing
+// testing

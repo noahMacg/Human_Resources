@@ -97,9 +97,9 @@ public class Main {
 			System.out.println(e);
 			System.exit(1);
 		}
-		System.out.println("This is the ordered set...");
+		System.out.printf("%-10s %10s %14s", "Name", "Height(cm)", "Weight(kg)" + "\n");
 		System.out.println(personOrderedSet);
-		System.out.println("This is the imperial set...");
+		System.out.printf("%-10s %10s %14s", "Name", "Height(ft)", "Weight(lb)" + "\n");
 		System.out.println(personImperialSet);
 
 		// File writer
