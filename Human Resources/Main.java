@@ -41,32 +41,31 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) throws IOException {
 
-		/*
-		 * if (args.length != 1) {
-		 * System.out.println("Please provide the file path.");
-		 * return;
-		 * }
-		 * String filePath = args[0];
-		 */
-
-		String filePath = "C:\\Users\\pilga\\code\\CS2251_code\\Human_Resources\\Human Resources\\hr.txt";
+		if (args.length != 1) {
+			System.out.println("Please provide the file path.");
+			return;
+		}
+		String filePath = args[0];
 
 		// Testing
 		/*
-		 * Person noah = new Person("Noah", 172, 72);
-		 * Person mario = new Person("Mario", 155, 90);
-		 * Person noahDup = new Person("Noah", 172, 72); // Dup test
-		 * Person peach = new Person("Peach", 183, 60);
-		 * 
-		 * PersonOrderedSet personSet = new PersonOrderedSet();
-		 * personSet.add(noah);
-		 * personSet.add(mario);
-		 * personSet.add(peach);
-		 * personSet.add(noahDup);
-		 * System.out.println(personSet.allPersonData());
-		 * System.out.println();
+		  String filePath =
+		  "C:\\Users\\pilga\\code\\CS2251_code\\Human_Resources\\Human Resources\\hr.txt";
+		  Person noah = new Person("Noah", 172, 72);
+		  Person mario = new Person("Mario", 155, 90);
+		  Person noahDup = new Person("Noah", 172, 72); // Dup test
+		  Person peach = new Person("Peach", 183, 60);
+		 
+		  PersonOrderedSet personSet = new PersonOrderedSet();
+		  personSet.add(noah);
+		  personSet.add(mario);
+		  personSet.add(peach);
+		  personSet.add(noahDup);
+		  System.out.println(personSet.allPersonData());
+		  System.out.println();
 		 */
 
+		// Two separate objects to hold ordered and imperial sets 
 		PersonSet personOrderedSet = new PersonOrderedSet();
 		PersonSet personImperialSet = new PersonImperialSet();
 
@@ -114,7 +113,7 @@ public class Main {
 			FileWriter fileOrderedSet = new FileWriter("HR_data_ordered_set.txt");
 			FileWriter fileImperialSet = new FileWriter("HR_data_imperial_set.txt");
 			fileOrderedSet.write(PersonSet.outputOrderedSet(personOrderedSet));
-			fileImperialSet.write(PersonSet.outputOrderedSet(personImperialSet));
+			fileImperialSet.write(PersonSet.outputImperialSet(personImperialSet));
 			fileOrderedSet.close();
 			fileImperialSet.close();
 		} catch (IOException e) {

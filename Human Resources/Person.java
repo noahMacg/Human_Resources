@@ -45,9 +45,10 @@ public class Person implements Comparable<Person> {
     // database ready string format
     @Override
     public String toString() {
-        return String.format("%-10s %-13.5s %-2.5s", name, height, weight);
+        return String.format("%-14s %-12.0f %-6.0f", name, height, weight);
     }
 
+    // Specifies what objects are being compared
     @Override
     public int compareTo(Person other) {
         return this.name.compareTo(other.name);
@@ -82,5 +83,4 @@ public class Person implements Comparable<Person> {
         } else
             return false;
     }
-
 }

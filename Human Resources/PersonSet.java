@@ -1,7 +1,7 @@
 /*
  * This class implements and expands on the interface PersonList. It has a method to 
- * add people's information to an ArrayList; method to get information from the ArrayList
- * based on the specified index; and a method to print the ArrayList. 
+ * add people's information to an ArrayList; a toString override; and two methods to 
+ * assist in printing the ordered and imperial sets.  
  */
 
 import java.util.ArrayList;
@@ -42,12 +42,14 @@ public class PersonSet implements PersonList {
         return allData;
     }
 
+    // Prints header + the ordered set
     public static String outputOrderedSet(PersonSet p) {
         String title = "<<Nintendo's human resources data>>";
         String header = String.format("%-10s %10s %14s", "Name", "Height(cm)", "Weight(kg)" + "\n");
         return title + "\n" + header + p.toString();
     }
 
+    // Prints header + the imperial set
     public static String outputImperialSet(PersonSet p) {
         String title = "<<Nintendo's human resources data>>";
         String header = String.format("%-10s %10s %14s", "Name", "Height(ft)", "Weight(lbs)" + "\n");
